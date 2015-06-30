@@ -11,14 +11,14 @@ except IOError:
 
 
 setup(name='django-humanize',
-      version='0.1',
+      version='0.1.1',
       description='Use humanize 3rd-party lib as template filters',
       long_description=README,
       author='Jocelyn Delalande',
       author_email='jdelalande@oasiswork.fr',
       url='https://github.com/oasiswork/django-humanize/',
       license='BSD License',
-      packages=['django_humanize'],
+      packages=['django_humanize', 'django_humanize.templatetags'],
       install_requires=['humanize>=0.5.1', 'Django'],
       classifiers=[
           'Programming Language :: Python',
