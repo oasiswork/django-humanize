@@ -11,7 +11,7 @@ except IOError:
 
 
 setup(name='django-humanize',
-      version='0.1.1',
+      version='0.1.2',
       description='Use humanize 3rd-party lib as template filters',
       long_description=README,
       author='Jocelyn Delalande',
