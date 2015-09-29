@@ -1,3 +1,9 @@
+# Python2 does not have FileNotFoundError
+try:
+    FileNotFoundError
+except NameError:
+    FileNotFoundError = IOError
+
 from django.utils.safestring import mark_safe
 from django.conf import settings
 from django.utils.translation import to_locale, get_language
