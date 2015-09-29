@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
-import imp
 
+import django_humanize.templatetags.humanizelib
 from django.test import TestCase
 from django.test.utils import override_settings
 from django.template import Template, Context
@@ -9,7 +9,7 @@ now = datetime.now()
 one_hour = timedelta(hours=1)
 one_day = timedelta(days=1)
 some_day = datetime(1982, 6, 27)
-import django_humanize.templatetags.humanizelib
+
 
 @override_settings(LANGUAGE_CODE='en-us')
 class TestHumanize(TestCase):

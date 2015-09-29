@@ -4,13 +4,13 @@ try:
 except NameError:
     FileNotFoundError = IOError
 
-from django.utils.safestring import mark_safe
 from django.conf import settings
-from django.utils.translation import to_locale, get_language
 from django import template
 import humanize
 
+
 register = template.Library()
+
 
 def init():
     """ Initialize the lib
@@ -23,19 +23,19 @@ def init():
         try:
             humanize.i18n.activate(locale)
         except FileNotFoundError:
-            pass # Just let it to the default locale
+            pass  # Just let it to the default locale
 
     HUMANIZE_FUNC_LIST = [
-     'naturalday',
-     'naturaltime',
-     'ordinal',
-     'intword',
-     'naturaldelta',
-     'intcomma',
-     'apnumber',
-     'fractional',
-     'naturalsize',
-     'naturaldate'
+        'naturalday',
+        'naturaltime',
+        'ordinal',
+        'intword',
+        'naturaldelta',
+        'intcomma',
+        'apnumber',
+        'fractional',
+        'naturalsize',
+        'naturaldate'
     ]
 
     # registers all humanize functions as template tags
